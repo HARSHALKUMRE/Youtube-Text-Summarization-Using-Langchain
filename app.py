@@ -49,7 +49,7 @@ api_key=st.sidebar.text_input("Enter your Groq API Key:",type="password")
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
 ## Gemma Model USsing Groq API
-llm =ChatGroq(model="Gemma-7b-It", api_key=api_key)
+llm =ChatGroq(groq_api_key=api_key, model_name="Gemma-7b-It")
 
 prompt_template="""
 Provide a summary of the following content in 300 words:
