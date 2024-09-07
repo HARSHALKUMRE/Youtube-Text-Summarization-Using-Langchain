@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          lfs: true
+          lfs: false
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://hacktech:$HF_TOKEN@huggingface.co/spaces/hacktech/Summarize-Text-From-YT-or-Website main
+        run: git push --force https://hacktech:$HF_TOKEN@huggingface.co/spaces/hacktech/Summarize-Text-From-YT-or-Website main
